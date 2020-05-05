@@ -15,6 +15,8 @@ class VidInfo:
 
 
 def download(vidinfo):
+    if os.path.exists(vidinfo.out_filename):
+        return '{}, DONE!'.format(vidinfo.yt_id)
 
     yt_base_url = 'https://www.youtube.com/watch?v='
 
